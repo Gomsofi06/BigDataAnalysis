@@ -1,0 +1,1007 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0415.1018                               -->
+<workbook original-version='18.1' source-build='2025.1.1 (20251.25.0415.1018)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SingleValuePerNestSorting />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='BigDataAnalysis_17468746194230' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='F1 score (final)' inline='true' name='federated.02bibno11wn3yx151w29d05rikmt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='final' name='excel-direct.1tl9ptj1u4zrto13a6fi30504nqh'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/sofiagomes/Documents/NOVA IMS/2 SEMESTER/Big Data Analytics/BigDataAnalysis/graphics/final.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' name='Precisão+' type='union'>
+          <columns header='yes'>
+            <column datatype='string' name='Modelo' />
+            <column datatype='string' name='Tipo de Métrica' />
+            <column datatype='string' name='Classe' />
+            <column datatype='string' name='Valor' />
+            <column datatype='string' name='Sheet' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='excel-direct.1tl9ptj1u4zrto13a6fi30504nqh' name='Precisão' table='[Precisão$]' type='table'>
+            <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+              <column datatype='string' name='Modelo' ordinal='0' />
+              <column datatype='string' name='Tipo de Métrica' ordinal='1' />
+              <column datatype='string' name='Classe' ordinal='2' />
+              <column datatype='string' name='Valor' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1tl9ptj1u4zrto13a6fi30504nqh' name='recall' table='[recall$]' type='table'>
+            <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+              <column datatype='string' name='Modelo' ordinal='0' />
+              <column datatype='string' name='Tipo de Métrica' ordinal='1' />
+              <column datatype='string' name='Classe' ordinal='2' />
+              <column datatype='string' name='Valor' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1tl9ptj1u4zrto13a6fi30504nqh' name='F1 score' table='[&apos;F1 score$&apos;]' type='table'>
+            <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+              <column datatype='string' name='Modelo' ordinal='0' />
+              <column datatype='string' name='Tipo de Métrica' ordinal='1' />
+              <column datatype='string' name='Classe' ordinal='2' />
+              <column datatype='string' name='Valor' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Precisão+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Modelo</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Modelo]</local-name>
+            <parent-name>[Precisão+]</parent-name>
+            <remote-alias>Modelo</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tipo de Métrica</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Tipo de Métrica]</local-name>
+            <parent-name>[Precisão+]</parent-name>
+            <remote-alias>Tipo de Métrica</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Classe</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Classe]</local-name>
+            <parent-name>[Precisão+]</parent-name>
+            <remote-alias>Classe</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Valor</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Valor]</local-name>
+            <parent-name>[Precisão+]</parent-name>
+            <remote-alias>Valor</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sheet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sheet]</local-name>
+            <parent-name>[Precisão+]</parent-name>
+            <remote-alias>Sheet</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Precisão+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_S2' />
+            <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Metrica Final' datatype='string' name='[Calculation_1654721027709210625]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF CONTAINS([Tipo de Métrica], &quot;F1 Score&quot;) THEN &quot;F1 Score&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Precisão&quot; THEN &quot;Precisão&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Recall&quot; THEN &quot;Recall&quot;&#10;END' />
+      </column>
+      <column caption='Precisão' datatype='table' name='[__tableau_internal_object_id__].[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/9b/jd3m9d1938sb3269cy5k5rzh0000gn/T/tableau-temp/#TableauTemp_13hwq5c1s46q11103gsup0wlxvnq.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/10/2025 10:50:03 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Modelo</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Modelo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Modelo</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Precisão+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tipo de Métrica</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Tipo de Métrica]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tipo de Métrica</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Precisão+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Classe</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Classe]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Classe</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Precisão+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Valor</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Valor]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Valor</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Precisão+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sheet</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sheet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sheet</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Precisão+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Table Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Table Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Table Name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Precisão+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_S2' />
+              <object-id>[Precisão_CA380E22C1E04985A20BAFAD997BBBD7]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Precisão' id='Precisão_CA380E22C1E04985A20BAFAD997BBBD7'>
+            <properties context=''>
+              <relation all='true' name='Precisão+' type='union'>
+                <columns header='yes'>
+                  <column datatype='string' name='Modelo' />
+                  <column datatype='string' name='Tipo de Métrica' />
+                  <column datatype='string' name='Classe' />
+                  <column datatype='string' name='Valor' />
+                  <column datatype='string' name='Sheet' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='excel-direct.1tl9ptj1u4zrto13a6fi30504nqh' name='Precisão' table='[Precisão$]' type='table'>
+                  <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+                    <column datatype='string' name='Modelo' ordinal='0' />
+                    <column datatype='string' name='Tipo de Métrica' ordinal='1' />
+                    <column datatype='string' name='Classe' ordinal='2' />
+                    <column datatype='string' name='Valor' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.1tl9ptj1u4zrto13a6fi30504nqh' name='recall' table='[recall$]' type='table'>
+                  <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+                    <column datatype='string' name='Modelo' ordinal='0' />
+                    <column datatype='string' name='Tipo de Métrica' ordinal='1' />
+                    <column datatype='string' name='Classe' ordinal='2' />
+                    <column datatype='string' name='Valor' ordinal='3' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.1tl9ptj1u4zrto13a6fi30504nqh' name='F1 score' table='[&apos;F1 score$&apos;]' type='table'>
+                  <columns gridOrigin='A1:D21:no:A1:D21:0' header='yes' outcome='2'>
+                    <column datatype='string' name='Modelo' ordinal='0' />
+                    <column datatype='string' name='Tipo de Métrica' ordinal='1' />
+                    <column datatype='string' name='Classe' ordinal='2' />
+                    <column datatype='string' name='Valor' ordinal='3' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='f1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>F1 Score</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='F1 score (final)' name='federated.02bibno11wn3yx151w29d05rikmt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.02bibno11wn3yx151w29d05rikmt'>
+            <column caption='Metrica Final' datatype='string' name='[Calculation_1654721027709210625]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Tipo de Métrica], &quot;F1 Score&quot;) THEN &quot;F1 Score&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Precisão&quot; THEN &quot;Precisão&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Recall&quot; THEN &quot;Recall&quot;&#10;END' />
+            </column>
+            <column datatype='string' name='[Classe]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Modelo]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Tipo de Métrica]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Valor]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1654721027709210625]' derivation='None' name='[none:Calculation_1654721027709210625:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Classe]' derivation='None' name='[none:Classe:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Modelo]' derivation='None' name='[none:Modelo:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Valor]' derivation='None' name='[none:Valor:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Calculation_1654721027709210625:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1654721027709210625:nk]' member='&quot;F1 Score&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.00&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.01&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.32&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.37&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.44&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.86&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.89&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.9&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.90&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.92&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.95&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.96&quot;' />
+            </groupfilter>
+          </filter>
+          <single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' shelf='rows' />
+          </single-value-per-nest-shelf-sorts>
+          <slices>
+            <column>[federated.02bibno11wn3yx151w29d05rikmt].[none:Calculation_1654721027709210625:nk]</column>
+            <column>[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]' value='94' />
+            <format attr='height' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' value='35' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' value='72' />
+            <format attr='height' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]' value='44' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]</rows>
+        <cols>[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]</cols>
+      </table>
+      <simple-id uuid='{498A81E5-91E8-443E-B651-9D76AD4D32EB}' />
+    </worksheet>
+    <worksheet name='precisao'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Precision</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='F1 score (final)' name='federated.02bibno11wn3yx151w29d05rikmt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.02bibno11wn3yx151w29d05rikmt'>
+            <column caption='Metrica Final' datatype='string' name='[Calculation_1654721027709210625]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Tipo de Métrica], &quot;F1 Score&quot;) THEN &quot;F1 Score&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Precisão&quot; THEN &quot;Precisão&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Recall&quot; THEN &quot;Recall&quot;&#10;END' />
+            </column>
+            <column datatype='string' name='[Classe]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Modelo]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Tipo de Métrica]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Valor]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1654721027709210625]' derivation='None' name='[none:Calculation_1654721027709210625:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Classe]' derivation='None' name='[none:Classe:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Modelo]' derivation='None' name='[none:Modelo:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Valor]' derivation='None' name='[none:Valor:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Calculation_1654721027709210625:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1654721027709210625:nk]' member='&quot;Precisão&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.0&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.04&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.06&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.3&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.33&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.62&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.82&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.88&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.9&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.90&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.92&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.93&quot;' />
+            </groupfilter>
+          </filter>
+          <single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' shelf='rows' />
+          </single-value-per-nest-shelf-sorts>
+          <slices>
+            <column>[federated.02bibno11wn3yx151w29d05rikmt].[none:Calculation_1654721027709210625:nk]</column>
+            <column>[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]' value='103' />
+            <format attr='height' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' value='35' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' value='40' />
+            <format attr='height' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]' value='44' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]</rows>
+        <cols>[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]</cols>
+      </table>
+      <simple-id uuid='{75CB42D9-7C74-47B8-B818-9401CE23A54E}' />
+    </worksheet>
+    <worksheet name='recall'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Recall</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='F1 score (final)' name='federated.02bibno11wn3yx151w29d05rikmt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.02bibno11wn3yx151w29d05rikmt'>
+            <column caption='Metrica Final' datatype='string' name='[Calculation_1654721027709210625]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF CONTAINS([Tipo de Métrica], &quot;F1 Score&quot;) THEN &quot;F1 Score&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Precisão&quot; THEN &quot;Precisão&quot;&#10;ELSEIF [Tipo de Métrica] = &quot;Recall&quot; THEN &quot;Recall&quot;&#10;END' />
+            </column>
+            <column datatype='string' name='[Classe]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Modelo]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Tipo de Métrica]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Valor]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1654721027709210625]' derivation='None' name='[none:Calculation_1654721027709210625:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Classe]' derivation='None' name='[none:Classe:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Modelo]' derivation='None' name='[none:Modelo:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Valor]' derivation='None' name='[none:Valor:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Calculation_1654721027709210625:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1654721027709210625:nk]' member='&quot;Recall&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.00&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.01&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.23&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.33&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.41&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.9&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.90&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.92&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;0.99&quot;' />
+              <groupfilter function='member' level='[none:Valor:nk]' member='&quot;1.0&quot;' />
+            </groupfilter>
+          </filter>
+          <single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' shelf='rows' />
+          </single-value-per-nest-shelf-sorts>
+          <slices>
+            <column>[federated.02bibno11wn3yx151w29d05rikmt].[none:Calculation_1654721027709210625:nk]</column>
+            <column>[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]' value='95' />
+            <format attr='height' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' value='42' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]' value='44' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.02bibno11wn3yx151w29d05rikmt].[none:Valor:nk]</rows>
+        <cols>[federated.02bibno11wn3yx151w29d05rikmt].[none:Modelo:nk]</cols>
+      </table>
+      <simple-id uuid='{2DE91644-6233-4C94-AF95-C25775C8711D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='820' minheight='460' minwidth='820' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97840' id='7' param='horz' type-v2='layout-flow' w='98048' x='976' y='1080'>
+            <zone h='97840' id='5' type-v2='layout-basic' w='51097' x='976' y='1080'>
+              <zone h='48920' id='3' name='precisao' w='51097' x='976' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48920' id='10' name='f1' w='51097' x='976' y='1080'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='385' h='97840' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='46951' x='52073' y='1080'>
+              <zone fixed-size='140' h='19973' id='8' is-fixed='true' name='precisao' pane-specification-id='0' param='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' type-v2='color' w='46951' x='52073' y='1080'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='524' h='71795' id='9' is-fixed='true' name='recall' w='46951' x='52073' y='21053'>
+                <layout-cache fixed-size-w='364' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97840' id='13' param='vert' type-v2='layout-flow' w='98048' x='976' y='1080'>
+                <zone fixed-size='280' h='48920' id='10' is-fixed='true' name='f1' w='51097' x='976' y='1080'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='71795' id='9' is-fixed='true' name='recall' w='46951' x='52073' y='21053'>
+                  <layout-cache fixed-size-w='364' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48920' id='3' is-fixed='true' name='precisao' w='51097' x='976' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='140' h='19973' id='8' name='precisao' pane-specification-id='0' param='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' type-v2='color' w='46951' x='52073' y='1080'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{81AD0CE3-C1A9-4C9E-9E43-E258D5A38BBE}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='700' maxwidth='1200' minheight='700' minwidth='1200' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='75285' id='15' is-fixed='true' type-v2='layout-basic' w='89250' x='667' y='9286'>
+            <zone h='75285' id='7' param='horz' type-v2='layout-flow' w='29916' x='667' y='9286'>
+              <zone fixed-size='353' h='74429' id='3' is-fixed='true' param='horz' type-v2='layout-flow' w='29916' x='667' y='9286'>
+                <zone fixed-size='351' h='74429' id='5' is-fixed='true' name='precisao' w='29916' x='667' y='9286'>
+                  <layout-cache fixed-size-h='513' fixed-size-w='318' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone h='75285' id='17' is-fixed='true' type-v2='layout-basic' w='59334' x='30583' y='9286'>
+              <zone h='75285' id='16' param='horz' type-v2='layout-flow' w='28167' x='30583' y='9286'>
+                <zone fixed-size='376' h='75285' id='9' is-fixed='true' name='recall' w='28167' x='30583' y='9286'>
+                  <layout-cache fixed-size-h='540' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='75285' id='18' param='horz' type-v2='layout-flow' w='31167' x='58750' y='9286'>
+                <zone fixed-size='351' h='74429' id='10' is-fixed='true' name='f1' w='31167' x='58750' y='9286'>
+                  <layout-cache fixed-size-h='513' fixed-size-w='361' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone fixed-size='184' h='89571' id='8' is-fixed='true' name='precisao' pane-specification-id='0' param='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' type-v2='color' w='9416' x='89917' y='9286'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='8143' id='11' type-v2='text' w='98666' x='667' y='1143'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='20'>Classification Models Comparison</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='14286' id='12' type-v2='text' w='30917' x='28750' y='84571'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontname='Arial'>Logistic Regression and Multilayer Perceptron achieve perfect recall for class 0 but completely fail to identify classes 1 and 2. Random Forest improves recall for class 2 but still performs poorly for class 1, revealing class imbalance challenges.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='14286' id='13' type-v2='text' w='28083' x='667' y='84571'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontname='Arial'>Random Forest shows the highest precision for classes 0 and 2, making it reliable when minimizing false positives. Logistic Regression and Multilayer Perceptron struggle significantly with class 1, indicating poor precision for minority classes.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='14286' id='14' type-v2='text' w='30250' x='59667' y='84571'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontname='Arial'>XGBoost stands out with the most balanced F1 scores across classes, particularly for class 2. Logistic Regression and MLP have near-zero F1 scores for classes 1 and 2, highlighting their poor overall classification performance for minority classes.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97714' id='21' param='vert' type-v2='layout-flow' w='98666' x='667' y='1143'>
+                <zone forceUpdate='true' h='8143' id='11' type-v2='text' w='98666' x='667' y='1143'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Arial Black' fontsize='20'>Classification Models Comparison</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='74429' id='5' is-fixed='true' name='precisao' w='29916' x='667' y='9286'>
+                  <layout-cache fixed-size-h='513' fixed-size-w='318' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='184' h='89571' id='8' name='precisao' pane-specification-id='0' param='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' type-v2='color' w='9416' x='89917' y='9286'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='75285' id='9' is-fixed='true' name='recall' w='28167' x='30583' y='9286'>
+                  <layout-cache fixed-size-h='540' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='74429' id='10' is-fixed='true' name='f1' w='31167' x='58750' y='9286'>
+                  <layout-cache fixed-size-h='513' fixed-size-w='361' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='14286' id='13' type-v2='text' w='28083' x='667' y='84571'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Arial'>Random Forest shows the highest precision for classes 0 and 2, making it reliable when minimizing false positives. Logistic Regression and Multilayer Perceptron struggle significantly with class 1, indicating poor precision for minority classes.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='14286' id='12' type-v2='text' w='30917' x='28750' y='84571'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Arial'>Logistic Regression and Multilayer Perceptron achieve perfect recall for class 0 but completely fail to identify classes 1 and 2. Random Forest improves recall for class 2 but still performs poorly for class 1, revealing class imbalance challenges.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='14286' id='14' type-v2='text' w='30250' x='59667' y='84571'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Arial'>XGBoost stands out with the most balanced F1 scores across classes, particularly for class 2. Logistic Regression and MLP have near-zero F1 scores for classes 1 and 2, highlighting their poor overall classification performance for minority classes.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BCAAE49C-EE74-402C-B4F7-BE322B516A49}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='recall'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7260C0DE-631E-416D-B85C-A7BFCA00806C}' />
+    </window>
+    <window class='worksheet' name='f1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1BAEA9EC-E045-44AF-A912-A613DFD39446}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='f1' />
+        <viewpoint name='precisao' />
+        <viewpoint name='recall' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{61680701-AC17-448D-89EC-50C0166F726B}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='f1' />
+        <viewpoint name='precisao' />
+        <viewpoint name='recall' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{1DD5A05E-44FC-44B4-A4DB-EC2AFB5A4246}' />
+    </window>
+    <window class='worksheet' name='precisao'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.02bibno11wn3yx151w29d05rikmt].[none:Classe:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{309A5983-DD0F-4ABC-9FDF-6672D99ABB58}' />
+    </window>
+  </windows>
+</workbook>
